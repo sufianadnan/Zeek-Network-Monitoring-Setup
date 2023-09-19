@@ -5,8 +5,6 @@ This script automates the setup process for Zeek Network Monitoring on your Ubun
 
 ### Author
 - Sufian Adnan
-- IT Student at Seneca College, Ontario, Canada
-- 3rd Year Student
 
 ## Prerequisites
 Before running this script, make sure you have:
@@ -26,3 +24,24 @@ Before running this script, make sure you have:
 
    ```bash
    chmod +x setup-zeek.sh
+Run the Script:
+
+Execute the script with root privileges using the sudo command:
+sudo ./setup-zeek.sh
+The script will ask for your network interface name (e.g., ens33). Enter the appropriate interface name when prompted.
+
+Wait for Setup to Complete:
+
+The script will perform the following tasks:
+
+- Update and upgrade system packages.
+- Install necessary packages (e.g., zeek, zeekctl, zkg).
+- Configure Zeek for network monitoring.
+- Start Zeek services.
+- Please be patient as the setup process may take some time.
+
+Verify Zeek Status:
+
+After the setup is complete, you can verify the status of Zeek by running:
+```bash
+sudo zeekctl status
