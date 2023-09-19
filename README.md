@@ -46,5 +46,6 @@ Verify Zeek Status:
 After the setup is complete, you can verify the status of Zeek by running:
 ```bash
 sudo zeekctl status
+```
 
 **NOTE: This enables your network interface into Promisc Mode and turns tx off rx off:  "tx off" disables transmit checksum offloading, and "rx off" disables receive checksum offloading. So if your system restarts then these while be wiped, make sure you make it stick on start**
