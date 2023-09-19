@@ -24,11 +24,12 @@ Before running this script, make sure you have:
 
    ```bash
    chmod +x setup-zeek.sh
-Run the Script:
+3. **Run the Script:**
 
-Execute the script with root privileges using the sudo command:
-sudo ./setup-zeek.sh
-The script will ask for your network interface name (e.g., ens33). Enter the appropriate interface name when prompted.
+   Execute the script with root privileges using the sudo command:
+   ```bash
+   sudo ./setup-zeek.sh
+The script will ask for your network interface name (e.g., ens33). Enter the appropriate interface name when prompted. So please check ahead of time.
 
 Wait for Setup to Complete:
 
@@ -45,3 +46,5 @@ Verify Zeek Status:
 After the setup is complete, you can verify the status of Zeek by running:
 ```bash
 sudo zeekctl status
+
+**NOTE: This enables your network interface into Promisc Mode and turns tx off rx off:  "tx off" disables transmit checksum offloading, and "rx off" disables receive checksum offloading. So if your system restarts then these while be wiped, make sure you make it stick on start**
